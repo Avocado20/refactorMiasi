@@ -5,9 +5,9 @@ public abstract class Obciazenie {
     protected String NAZWA_OBCIĄŻENIA;
     protected double stopaObciazenia;
 
-    public Obciazenie(String nazwaObciazenia, double stopaObciazenia) {
+    public Obciazenie(String nazwaObciazenia, double kwotaObciazenia) {
         this.NAZWA_OBCIĄŻENIA = nazwaObciazenia;
-        this.stopaObciazenia = stopaObciazenia;
+        this.stopaObciazenia = kwotaObciazenia;
     }
 
     public String pobierzNazwe() {
@@ -19,6 +19,6 @@ public abstract class Obciazenie {
     }
 
     public double obliczObciazenia(double podstawaObciazenia) {
-        return podstawaObciazenia * this.stopaObciazenia * 0.01;
+        return podstawaObciazenia * stopaObciazenia * 0.01;
     }
 }

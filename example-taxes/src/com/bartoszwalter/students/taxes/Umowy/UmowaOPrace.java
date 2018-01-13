@@ -13,13 +13,14 @@ public class UmowaOPrace extends Umowa {
         this.obciazenia.add(new SkladkaChorobowa(stopyPodatkowe.pobierzStope("SKLADKA_CHOROBOWA")));
         this.obciazenia.add(new SkladkaZdrowotna(stopyPodatkowe.pobierzStope("SKLADKA_ZDROWOTNA"), stopyPodatkowe.pobierzStope("SKLADKA_EMERYTALNA"),
                 stopyPodatkowe.pobierzStope("SKLADKA_RENTOWA"), stopyPodatkowe.pobierzStope("SKLADKA_CHOROBOWA")));
+        this.zestawUlg.
     }
 
     @Override
     public void obliczSkladki() {
         ZestawSkladek zestawSkladek = new ZestawSkladek();
         for (Obciazenie obciazenie : this.obciazenia) {
-            zestawSkladek.dodajSkladke(obciazenie.pobierzNazwe(), this.podstawaOpodatkowa * (obciazenie.pobierzStopeObciazenia() * 0.01));
+            zestawSkladek.dodajSkladke(obciazenie.pobierzNazwe(), obciazenie.obliczObciazenia(this.podstawaOpodatkowa));
         }
         this.zestawSkladek = zestawSkladek;
     }

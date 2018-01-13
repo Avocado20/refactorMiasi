@@ -3,6 +3,7 @@ package com.bartoszwalter.students.taxes.Umowy;
 
 import com.bartoszwalter.students.taxes.Obciazenia.Obciazenie;
 import com.bartoszwalter.students.taxes.Skladki.ZestawSkladek;
+import com.bartoszwalter.students.taxes.Skladki.ZestawUlg;
 import com.bartoszwalter.students.taxes.StopyPodatkowe.StopyPodatkowe;
 
 import java.util.ArrayList;
@@ -13,6 +14,7 @@ public abstract class Umowa {
     protected StopyPodatkowe stopyPodatkowe;
     protected double podstawaOpodatkowa;
     protected ZestawSkladek zestawSkladek;
+    protected ZestawUlg zestawUlg = new ZestawUlg();
     protected List<Obciazenie> obciazenia;
 
     public Umowa (StopyPodatkowe stopyPodatkowe) {

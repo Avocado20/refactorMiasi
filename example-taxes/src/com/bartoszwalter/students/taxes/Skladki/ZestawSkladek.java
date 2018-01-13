@@ -7,10 +7,6 @@ public class ZestawSkladek {
 
     private Map<String, Double>  zestawSkladek = new HashMap<>();
 
-    public ZestawSkladek() {
-
-    }
-
     public boolean dodajSkladke(String klucz, Double wartosc) {
         zestawSkladek.put(klucz, wartosc);
         return true;
