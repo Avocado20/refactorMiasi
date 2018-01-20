@@ -13,7 +13,6 @@ public class UmowaOPrace extends Umowa {
         this.obciazenia.add(new SkladkaChorobowa(stopyPodatkowe.pobierzStope("SKLADKA_CHOROBOWA")));
         this.obciazenia.add(new SkladkaZdrowotna(stopyPodatkowe.pobierzStope("SKLADKA_ZDROWOTNA"), stopyPodatkowe.pobierzStope("SKLADKA_EMERYTALNA"),
                 stopyPodatkowe.pobierzStope("SKLADKA_RENTOWA"), stopyPodatkowe.pobierzStope("SKLADKA_CHOROBOWA")));
-        this.zestawUlg.
     }
 
     @Override
