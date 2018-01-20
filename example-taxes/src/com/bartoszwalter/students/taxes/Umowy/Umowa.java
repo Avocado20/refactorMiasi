@@ -27,6 +27,10 @@ public abstract class Umowa {
         return true;
     }
 
+    public double pobierzPostawe() {
+        return this.podstawaOpodatkowa;
+    }
+
     public boolean ustawStopyPodatkowe(StopyPodatkowe stopyPodatkowe) {
         this.stopyPodatkowe = stopyPodatkowe;
         return true;
